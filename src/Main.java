@@ -1,17 +1,79 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        String str = "Hello World";
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        //CharAt()
+        System.out.println(str.charAt(4));
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        //Contains
+        System.out.println(str.contains("Hello"));
+
+        //Equals
+        String str1 = "Hello world";
+        if(str.equals(str1)){
+            System.out.println("Equals");
         }
+        else{
+            System.out.println("Not Equals");
+        }
+
+        //Equals Ignore Case
+        if(str.equalsIgnoreCase(str1)){
+            System.out.println("Equals");
+        }
+        else{
+            System.out.println("Not Equals");
+        }
+
+        //IndexOf
+        System.out.println(str.indexOf('W'));
+
+        //Last IndexOf
+        System.out.println(str.lastIndexOf('o'));
+
+        //Replace
+        String replace = str.replace('H','h');
+        System.out.println(replace);
+
+        //Concat
+        String concat = str.concat("\t in Java");
+        System.out.println(concat);
+
+        //Ends with
+        boolean ends = str.endsWith("d");
+        System.out.println(ends);
+
+        //uppercase
+        System.out.println(str.toUpperCase());
+
+        //lowercase
+        System.out.println(str.toLowerCase());
+
+        //startswith
+        boolean start = str.startsWith("java");
+        System.out.println(start);
+        boolean startwith = str.startsWith("Hello");
+        System.out.println(startwith);
+
+        //strip
+        String string = "          Hello world  !!!!         ";
+        System.out.println(string);
+        String strip = string.strip();
+        System.out.println(strip);
+        String leading  = string.stripLeading();
+        String trailing = string.stripTrailing();
+        System.out.println(leading);
+        System.out.println(trailing);
+
+        //trim
+        String trim = string.trim();
+        System.out.println(trim);
+
+        //split
+        String split[] = str.split("l",4);
+        for (String string1 : split)
+             System.out.println(string1);
     }
 }
